@@ -1,0 +1,263 @@
+/* Netflix Clone CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #000;
+  color: white;
+}
+
+/* Background Image Fix */
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Background Video (if needed) */
+.background-container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+
+.background-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Ensure full cover */
+  background: rgba(0, 0, 0, 0.7); /* Reduce darkness if needed */
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  width: 150px;
+}
+
+.maintext {
+  position: absolute;
+  top: 55%; /* Adjusted lower */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 80%;
+}
+
+.maintext h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.maintext p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.email-signup {
+  margin-top: 20px;
+}
+
+.email-signup input {
+  padding: 10px;
+  width: 300px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.getstarted-btn {
+  background: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.signin-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.trending-section {
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filters select {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  background: #333;
+  color: white;
+}
+
+.movies-container {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+.movies-container::-webkit-scrollbar {
+  display: none;
+}
+
+.movie-card {
+  min-width: 220px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  scroll-snap-align: start;
+  background: black; /* Prevent alt text from overlapping */
+}
+
+.movie-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.movie-card:hover {
+  transform: translateY(-15px);
+}
+
+.movie-info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.more-reasons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.reason-card {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  width: 250px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.reason-card:hover {
+  transform: translateY(-5px);
+}
+
+.reason-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.reason-card p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.reason-card img {
+  display: block;
+  margin: 15px auto 0;
+  width: 40px;
+}
+
+.faq-section {
+  margin-top: 50px;
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 40px;
+  background: #222;
+}
+
+footer p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
