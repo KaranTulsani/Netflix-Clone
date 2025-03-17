@@ -2,7 +2,7 @@
 
 A Netflix clone built using HTML, CSS, and JavaScript to replicate the UI and some basic functionalities of Netflix.  
 
-Project link-
+Project link- https://karantulsani.github.io/Netflix-Clone/
 
 ## 🚀 Features  
 - 🔹 Responsive UI similar to Netflix  
